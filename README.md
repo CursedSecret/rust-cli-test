@@ -1,0 +1,1 @@
+A test to create a rust project for gitpod
