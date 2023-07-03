@@ -7,9 +7,9 @@ pub mod kaprekar {
         } else {
             let mut number_array: [i32; 4] = convert_to_array(number);
             number_array.sort();
-            let large = convert_to_number(number_array);
+            let large = convert_to_number(&number_array);
             number_array.reverse();
-            let small = convert_to_number(number_array);
+            let small = convert_to_number(&number_array);
 
             return kaprekar(large - small) + 1;
         }
@@ -44,7 +44,7 @@ pub mod kaprekar {
         result
     }
 
-    fn convert_to_number(array: [i32; 4]) -> i32 {
+    fn convert_to_number(array: &[i32; 4]) -> i32 {
         let mut result = 0;
         let mut factor = 1;
         for digit in array {
